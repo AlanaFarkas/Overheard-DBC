@@ -1,0 +1,16 @@
+<h2>What did overhear recently?</h2>
+
+
+<form class="entry-form" method="POST" action="/entries">
+<div><input type="text" name="entry[title]" placeholder="Title"></div>
+<div><input type="text" name="entry[body]" style= "width: 300px; height: 100px" placeholder="What did you hear?"></div>
+<div><input type="submit" value="Submit"></div>
+</form>
+
+<% if @errors %>
+  <ul>
+    <% @errors.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>

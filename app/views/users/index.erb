@@ -1,0 +1,6 @@
+<h2>We're listening...</h2>
+<div>
+<% @users.each do |user| %>
+	<p><a href="/users/<%=user.id%>"><%= user.email %></a></p>
+	<% end %>
+</div>

@@ -1,0 +1,6 @@
+<h3>Listener profile for: <%= @user.email %> </h3>
+
+<% @user.entries.each do |entry| %>
+<div>Entries: <a href="/entries/<%=entry.id%>"><%= entry.title %></a></div>
+<% end %>
+

@@ -1,0 +1,8 @@
+<h3>Everything we've overheard at DBC</h3>
+
+<% @entries.each do |entry| %>
+<section id="entry-index">
+<div><a href='/entries/<%=entry.id%>'><%= entry.title %></a></div>
+<div><p>posted by: <a href="/users/<%=entry.user.id%>"><%=entry.user.email %></a></p></div>
+<% end %>
+</section>

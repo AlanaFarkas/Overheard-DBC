@@ -1,0 +1,19 @@
+<h2>Editing submission titled: <%= @entry.title %></h2>
+
+<form method="POST" action="/entries/<%=@entry.id%>">
+  <input type="hidden" name="_method" value="PUT">
+
+  <input type="text" name="entry[title]" placeholder="Edit title" value="<%= @entry.title %>">
+  <input type="text" name="entry[body]" placeholder="Edit your submission" value="<%= @entry.body %>">
+ 
+  <input type="submit" value="Update this submission">
+
+</form>
+
+<% if @errors %>
+  <ul>
+    <% @errors.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
